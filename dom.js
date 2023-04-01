@@ -22,3 +22,37 @@ const cards =document.getElementsByClassName('card')
 //changing propertise ie. props
 para.innerHTML='this is my first para in js'
 para.innerText='this will change only text'
+const btn =document.getElementById('showhidebtn')
+const container =document.getElementsByClassName('container')[0]
+btn.addEventListener('click',()=>{ //an event and funtion to perform when that event happens
+    if(container.style.display=='block'){
+        container.style.display='none'
+        btn.innerText='Show Card'
+        btn.style.backgroundColor='lightcoral'
+    }
+    else{
+        container.style.display='block'
+        btn.innerText='Hide Card'
+        btn.style.backgroundColor='lightgreen'
+
+
+    }
+    
+    //changing style of the container on clicking the button
+    
+})
+const number=document.getElementsByTagName('span')[0]
+
+const plus =document.getElementById('plus')
+const reset =document.getElementById('reset')
+const minus =document.getElementById('minus')
+
+plus.addEventListener('click',()=>{
+    number.innerText++
+})
+reset.addEventListener('click',()=>{
+    number.innerText=0
+})
+minus.addEventListener('click',()=>{
+    number.innerText--
+})
